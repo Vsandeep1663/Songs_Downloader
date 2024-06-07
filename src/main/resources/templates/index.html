@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Songs Downloader</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+    <h1>Songs Downloader</h1>
+    <form action="#" th:action="@{/download}" method="post">
+        <label for="urls">Enter song URLs (one per line):</label><br>
+        <textarea id="urls" name="urls" rows="10" cols="50"></textarea><br>
+        <button type="submit">Download Songs</button>
+    </form>
+    <p th:text="${message}"></p>
+</body>
+</html>
